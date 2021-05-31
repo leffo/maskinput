@@ -3,7 +3,7 @@
       <select v-model="countryCod">
         <option v-for="item in phonesCodes" :value="item.code" :key="item.code">{{ item.code }}</option>
       </select>
-      <input type="tel" v-mask="maskaInput" :key="maskaInput"/>
+      <input type="tel" v-mask="maskaInput" :key="maskaInput.mask"/>
       <div>{{ maskaInput }}</div>
   </div>
 </template>
@@ -33,18 +33,17 @@ export default {
         de: { code: 'de', name: 'Германия', dialCode: 49, example: '99999 9999999' },
         kz: { code: 'kz', name: 'Казахстан', dialCode: 7, example: '(999) 999-99-99' },
       },
-
+      maskaKey: '',
       countryCod: 'ru',
+
     };
   },
   computed: {
     maskaInput() {
-      let maska = this.phonesCodes[this.countryCod].example;
-      maska = {
-        mask: maska,
-        clearMaskOnLostFocus: false
+      return {
+        mask: this.phonesCodes[this.countryCod].example,
+        clearMaskOnLostFocus: false,
       };
-      return maska;
     }
   },
 };
