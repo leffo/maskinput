@@ -33,9 +33,7 @@ export default {
         de: { code: 'de', name: 'Германия', dialCode: 49, example: '99999 9999999' },
         kz: { code: 'kz', name: 'Казахстан', dialCode: 7, example: '(999) 999-99-99' },
       },
-      maskaKey: '',
       countryCod: 'ru',
-
     };
   },
   computed: {
@@ -44,7 +42,7 @@ export default {
         mask: this.phonesCodes[this.countryCod].example,
         clearMaskOnLostFocus: false,
       };
-    }
+    },
   },
 };
 </script>
