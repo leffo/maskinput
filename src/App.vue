@@ -40,6 +40,10 @@ export default {
   computed: {
     maskaInput() {
       let maska = this.phonesCodes[this.countryCod].example;
+      maska = {
+        mask: maska,
+        clearMaskOnLostFocus: false
+      };
       return maska;
     }
   },
