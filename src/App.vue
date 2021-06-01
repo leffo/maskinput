@@ -3,7 +3,6 @@
       <select v-model="countryCod">
         <option v-for="item in phonesCodes" :value="item.code" :key="item.code">{{ item.code }}</option>
       </select>
-<!--      <input type="tel" v-mask="maskaInput" :key="maskaInput.mask"/>-->
     <input type="tel" v-maske="maskaInput" />
       <div>{{ maskaInput }}</div>
   </div>
