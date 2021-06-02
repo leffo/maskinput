@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import mask from 'vue-r-mask'
+import maske from 'vue-r-mask'
 
 export default {
   name: "App",
@@ -26,7 +26,7 @@ export default {
         lv: { code: 'lv', name: 'Латвия', dialCode: 371, example: "/\\d{2} \\d{3} \\d{3}/" },
         lt: { code: 'lt', name: 'Литва', dialCode: 370, example: "/\\(\\d-\\d{3}\\) \\d{5}/"},
         md: { code: 'md', name: 'Молдавия', dialCode: 373, example: "/\\d{4} \\d{2} \\d{3}/" },
-        ru: { code: 'ru', name: 'Россия', dialCode: 7, example: "/\\(\\d{3}\\) \\d{3}-\\d{2}-\\d{2}/" },
+        ru: { code: 'ru', name: 'Россия', dialCode: 7, example: /\(\d{3}\) \d{3}-\d{2}-\d{2}/ },
         tj: { code: 'tj', name: 'Таджикистан', dialCode: 992, example: "/\\d{3} \\d{2} \\d{4}/" },
         tm: { code: 'tm', name: 'Туркменистан', dialCode: 993, example: "/\\(8 \\d{3}\\) \\d{1}-\\d{2}-\\d{2}/"},
         ua: { code: 'ua', name: 'Украина', dialCode: 380, example: "/0\\d{2} \\d{3} \\d{4}/" },
@@ -43,7 +43,7 @@ export default {
     },
   },
   directives: {
-    maske: mask,
+    maske: maske,
   },
 
 };
